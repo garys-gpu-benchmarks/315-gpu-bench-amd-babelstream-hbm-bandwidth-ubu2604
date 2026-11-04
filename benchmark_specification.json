@@ -25,6 +25,11 @@
     "value": "gpu-bench-amd-babelstream-hbm-bandwidth-ubu2604"
   },
   {
+    "field_name": "Repo Directory Name",
+    "source_file": "BenchmarkSpecDefinitions.xlsx::Workload_Definitions",
+    "value": "315-gpu-bench-amd-babelstream-hbm-bandwidth-ubu2604"
+  },
+  {
     "field_name": "Main Goal",
     "source_file": "BenchmarkSpecDefinitions.xlsx::Workload_Definitions",
     "value": "Measure sustained BabelStream HBM bandwidth"
@@ -57,7 +62,7 @@
   {
     "field_name": "Execution Description With Parameters",
     "source_file": "BenchmarkSpecDefinitions.xlsx::Workload_Definitions",
-    "value": "Builds and runs custom bin/hip-stream (BabelStream-style HIP kernels). array_size, num_iterations, and device_id are forwarded. peak_percent is bandwidth/53. runtime_ms is hardcoded 1.0"
+    "value": "Builds and runs custom bin/hip-stream (BabelStream-style HIP kernels). array_size, num_iterations, device_id, block_size (threads per block, 1-1024) and warmup_iters (untimed launches per kernel) are forwarded. peak_percent is bandwidth/53. runtime_ms is hardcoded 1.0"
   },
   {
     "field_name": "Execution Domain",

@@ -2,7 +2,7 @@
 
 ## Execution Description
 
-Builds and runs custom bin/hip-stream (BabelStream-style HIP kernels). array_size, num_iterations, and device_id are forwarded. peak_percent is bandwidth/53. runtime_ms is hardcoded 1.0 Sweep dimensions: device_id, block_size, array_size, warmup_iters, num_iterations.
+Builds and runs custom bin/hip-stream (BabelStream-style HIP kernels). array_size, num_iterations, device_id, block_size (threads per block, 1-1024) and warmup_iters (untimed launches per kernel) are forwarded. peak_percent is bandwidth/53. runtime_ms is hardcoded 1.0 Sweep dimensions: device_id, block_size, array_size, warmup_iters, num_iterations.
 
 ## Parameters
 
@@ -37,7 +37,7 @@ sample_index,status,kernel,bandwidth_gb_s,peak_percent,runtime_ms,error_message
 
 ## Framework
 
-Builds and runs custom bin/hip-stream (BabelStream-style HIP kernels). array_size, num_iterations, and device_id are forwarded. peak_percent is bandwidth/53.
+Builds and runs custom bin/hip-stream (BabelStream-style HIP kernels). array_size, num_iterations, device_id, block_size (threads per block, 1-1024) and warmup_iters (untimed launches per kernel) are forwarded. peak_percent is bandwidth/53.
 
 ## Installation and Execution Summary
 
@@ -97,10 +97,10 @@ bash run_benchmark.sh --profile extended --validate
 2. `run.error_message` is NULL.
 3. `started_at` and `finished_at` are valid ISO-8601 UTC strings.
 4. All required aggregate metrics in `runs` are non-NULL and finite.
-5. All required aggregate metrics are physically sensible (positive values). Builds and runs custom bin/hip-stream (BabelStream-style HIP kernels). array_size, num_iterations, and device_id are forwarded. peak_percent is bandwidth/53.
+5. All required aggregate metrics are physically sensible (positive values). Builds and runs custom bin/hip-stream (BabelStream-style HIP kernels). array_size, num_iterations, device_id, block_size (threads per block, 1-1024) and warmup_iters (untimed launches per kernel) are forwarded. peak_percent is bandwidth/53.
 6. At least 2 sample rows exist for the latest `run_id` (sweep coverage).
 7. No sample has `status = 'error'`.
-8. Builds and runs custom bin/hip-stream (BabelStream-style HIP kernels). array_size, num_iterations, and device_id are forwarded. peak_percent is bandwidth/53.
+8. Builds and runs custom bin/hip-stream (BabelStream-style HIP kernels). array_size, num_iterations, device_id, block_size (threads per block, 1-1024) and warmup_iters (untimed launches per kernel) are forwarded. peak_percent is bandwidth/53.
 
 ### Baseline / Threshold configuration (`config/benchmark_config.yaml`)
 
