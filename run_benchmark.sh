@@ -19,9 +19,9 @@ usage() {
 
 Usage: bash run_benchmark.sh [OPTIONS]
 
-Workload Name:          BabelStream HBM Bandwidth.
-Main Goal:              Measure sustained BabelStream HBM bandwidth.
-Command Tools Executed: Build via scripts/build.sh if needed; run bin/hip-stream.
+Workload Name:          BabelStream HBM Bandwidth
+Main Goal:              Measure sustained BabelStream HBM bandwidth
+Command Tools Executed: Build via scripts/build.sh if needed; run bin/hip-stream
 
 Profiles (default: --smoke):
   --smoke                       Run smoke profile
