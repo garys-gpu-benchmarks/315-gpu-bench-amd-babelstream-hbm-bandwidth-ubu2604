@@ -40,6 +40,11 @@
     "value": "Build via scripts/build.sh if needed; run bin/hip-stream"
   },
   {
+    "field_name": "Execution Description With Parameters",
+    "source_file": "BenchmarkSpecDefinitions.xlsx::Workload_Definitions",
+    "value": "Builds and runs custom bin/hip-stream (BabelStream-style HIP kernels). array_size, num_iterations, device_id, block_size (threads per block, 1-1024) and warmup_iters (untimed launches per kernel) are forwarded. peak_percent is bandwidth/53. runtime_ms is hardcoded 1.0"
+  },
+  {
     "field_name": "Metrics",
     "source_file": "BenchmarkSpecDefinitions.xlsx::Workload_Definitions",
     "value": "#1: Copy bandwidth (bandwidth_gb_s_copy); #2: Mul bandwidth (bandwidth_gb_s_mul); #3: Add bandwidth (bandwidth_gb_s_add); #4: Triad bandwidth (bandwidth_gb_s_triad); #5: Dot bandwidth (bandwidth_gb_s_dot)"
@@ -173,11 +178,6 @@
     "field_name": "Command Methodology",
     "source_file": "BenchmarkSpecDefinitions.xlsx::Workload_Definitions",
     "value": "Compile and run bin/hip-stream once over yaml array_size and num_iterations, parse Copy, Mul, Add, Triad, and Dot bandwidth, and set peak_percent to bandwidth/53. runtime_ms is hardcoded 1.0"
-  },
-  {
-    "field_name": "Execution Description With Parameters",
-    "source_file": "BenchmarkSpecDefinitions.xlsx::Workload_Definitions",
-    "value": "Builds and runs custom bin/hip-stream (BabelStream-style HIP kernels). array_size, num_iterations, device_id, block_size (threads per block, 1-1024) and warmup_iters (untimed launches per kernel) are forwarded. peak_percent is bandwidth/53. runtime_ms is hardcoded 1.0"
   },
   {
     "field_name": "Execution Domain",
